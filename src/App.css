@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --background-color: #000000;
+  --color: #000000;
+  --light-theme: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.App{
+  background-color: #000;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.bts-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 220px;
+  height: 60px;
+  
+  background-color: var(--light-theme);
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color);
+  transition: all 0.3s;
+  position: relative;
+
+  text-align: center;
+  overflow: hidden;
+
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 26px 3px rgba(255,255,255,0.89);
+  margin: 50px;
+}
+.bts-video:hover {
+  transform: translateX(5px) translateY(-7px);
+  box-shadow: 0px 0px 26px 5px rgba(255,255,255,0.89);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.linda-true{
+  opacity: 100%;
+  transition: 1s ease-in-out;
+}
+
+.linda-false{
+  opacity: 0%;
+  transition: 1s ease-in-out;
 }
